@@ -237,7 +237,7 @@ with open('results_test14.csv', 'w', newline='') as csvfile:
         model.load_state_dict(torch.load(f'resnet_{fold + 1}.pt'))
 
         test_loss, test_acc, y_true, y_pred, y_score = test(model, test_loader, criterion)
-        # print(f"y true = {y_true} / y pred = {y_pred}")
+
         # Calculate additional metrics
         tn, fp, fn, tp = confusion_matrix(y_true, y_pred, labels=[0, 1]).ravel()
         mcc = matthews_corrcoef(y_true, y_pred)

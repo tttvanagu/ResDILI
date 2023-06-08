@@ -167,7 +167,7 @@ class ResNet(nn.Module):
 
 if __name__ == '__main__':
     tensor = torch.rand([1, 3, 224, 224])
-    model = ResNet(img_channels=3, num_layers=34, block=BasicBlock, num_classes=2)
+    model = ResNet(img_channels=3, num_layers=34, block=BasicBlock, num_classes=2) #
     print(model)
     
     # Total parameters and trainable parameters.
